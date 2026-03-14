@@ -1,7 +1,17 @@
-AI Notes Search Engine
-======================
+# AI Notes Assistant
 
-A minimal prototype for a local Retrieval-Augmented Generation (RAG) style notes assistant over your PDFs.
+AI Notes Assistant is an AI-powered document search system that allows users to upload PDF files and ask questions about their content.
+
+The system uses semantic search and vector embeddings to retrieve relevant information from documents. It demonstrates the concept of Retrieval-Augmented Generation (RAG) by combining document retrieval with AI-powered responses.
+
+This project was built as part of an AI/ML internship evaluation to demonstrate vector search, semantic retrieval, and document-based question answering.
+
+
+## Problem Statement
+
+Large documents such as notes, research papers, and resumes contain valuable information but searching through them manually is inefficient. Traditional keyword search often fails when the query wording differs from the document text.
+
+This project solves this problem using semantic search, allowing users to ask natural language questions and retrieve relevant information from documents.
 
 Project layout
 --------------
@@ -15,6 +25,21 @@ Project layout
 - `streamlit_app.py` – web UI for uploading PDFs and asking questions.
 - `data/` – put your `.pdf` notes here if you use the CLI.
 
+## System Architecture
+
+PDF Upload  
+↓  
+Text Extraction (PyPDF)  
+↓  
+Text Chunking  
+↓  
+Vector Embeddings (Sentence Transformers)  
+↓  
+Similarity Search (Cosine Similarity)  
+↓  
+Relevant Context Retrieval  
+↓  
+Answer Display
 Setup
 -----
 
